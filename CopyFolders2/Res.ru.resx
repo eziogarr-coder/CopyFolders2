@@ -1,0 +1,213 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Error" xml:space="preserve">
+        <value>Ошибка </value>
+    </data>
+    <data name="CriticalError" xml:space="preserve">
+        <value>Критическая ошибка </value>
+    </data>
+    <data name="WillClosed" xml:space="preserve">
+        <value>CopyFolders2 будет закрыт.</value>
+    </data>
+    <data name="AppName" xml:space="preserve">
+        <value>CopyFolders2</value>
+    </data>
+    <data name="Unhandled" xml:space="preserve">
+        <value>Необработанная ошибка </value>
+    </data>
+    <data name="SelectFolder" xml:space="preserve">
+        <value>Выберите папку</value>
+    </data>
+    <data name="msg_SamePaths" xml:space="preserve">
+        <value>Исходная и целевая папки должны быть разными!</value>
+    </data>
+    <data name="msg_DontExist" xml:space="preserve">
+        <value>Одна или несколько ранее выбранных папок больше не существуют (красный фон)</value>
+    </data>
+    <data name="Update" xml:space="preserve">
+        <value>Доступно обновление программы.
+Нажмите "Да" если хотите загрузить его сейчас, иначе нажмите "Нет"</value>
+    </data>
+    <data name="msg_BothEmpty" xml:space="preserve">
+        <value>Кнопка становится активной только после того, как указаны исходная и целевая папки!</value>
+    </data>
+    <data name="AlmostOne" xml:space="preserve">
+        <value>Вы должны выбрать хотя бы одну строку!</value>
+    </data>
+    <data name="msg_NoWildCards" xml:space="preserve">
+        <value>Символы подстановки не допускаются в отрицательных масках! Смотрите Руководство.</value>
+    </data>
+    <data name="msg_Running" xml:space="preserve">
+        <value>Программа уже запущена!</value>
+    </data>
+    <data name="msg_NoBasename" xml:space="preserve">
+        <value>Исходный путь не содержит папку basename!</value>
+    </data>
+    <data name="msg_NoLog" xml:space="preserve">
+        <value>В данный момент нет файлов .log</value>
+    </data>
+    <data name="msg_Erased" xml:space="preserve">
+        <value>Все данные конфигурации будут удалены.</value>
+    </data>
+    <data name="txtRowN" xml:space="preserve">
+        <value>Строка №.</value>
+    </data>
+    <data name="txtStartingPath" xml:space="preserve">
+        <value>Исходный путь</value>
+    </data>
+    <data name="txtDoneIn" xml:space="preserve">
+        <value>Проверка файлов завершена за</value>
+    </data>
+    <data name="txtSeconds" xml:space="preserve">
+        <value>секунд</value>
+    </data>
+    <data name="txtFound" xml:space="preserve">
+        <value>Найдено</value>
+    </data>
+    <data name="txtAccessibleFiles" xml:space="preserve">
+        <value>доступные файлы, соответствующие вашим настройкам за</value>
+    </data>
+    <data name="txtAccessibleDir" xml:space="preserve">
+        <value>доступные каталоги размером</value>
+    </data>
+    <data name="txtSkipping" xml:space="preserve">
+        <value>Подождите, фильтруются неизменённые файлы...</value>
+    </data>
+    <data name="txtTotSeconds" xml:space="preserve">
+        <value>секунд всего</value>
+    </data>
+    <data name="txtNewSize" xml:space="preserve">
+        <value>новые или изменённые файлы размером</value>
+    </data>
+    <data name="txtTotalFound" xml:space="preserve">
+        <value>Общий отчет: найдено</value>
+    </data>
+    <data name="txtNewTotSize" xml:space="preserve">
+        <value>новые или изменённые файлы общим размером</value>
+    </data>
+    <data name="txtNewNoSize" xml:space="preserve">
+        <value>новые или изменённые файлы</value>
+    </data>
+    <data name="txtNoFileToCopy" xml:space="preserve">
+        <value>Нет файлов для копирования: кнопка "Копировать" не активна</value>
+    </data>
+    <data name="txtPressOpen" xml:space="preserve">
+        <value>Нажмите кнопку "Открыть CF2.log", чтобы прочитать список файлов</value>
+    </data>
+    <data name="txtStartCopy" xml:space="preserve">
+        <value>Копирование в процессе</value>
+    </data>
+    <data name="txtCopyinErr" xml:space="preserve">
+        <value>ошибки копирования</value>
+    </data>
+    <data name="txtNoCopyErr" xml:space="preserve">
+        <value>без ошибок копирования</value>
+    </data>
+    <data name="txtCopied" xml:space="preserve">
+        <value>Скопировано</value>
+    </data>
+    <data name="txtOver" xml:space="preserve">
+        <value>вверх</value>
+    </data>
+    <data name="msg_CantCheck" xml:space="preserve">
+        <value>Невозможно выбрать флажок: исходный путь больше не существует!</value>
+    </data>
+    <data name="txtPressOpen2" xml:space="preserve">
+        <value> Ошибки и игнорируемые файлы находятся в конце списка</value>
+    </data>
+    <data name="txtDoneOut" xml:space="preserve">
+        <value>копирование выполнено в</value>
+    </data>
+    <data name="logRowN" xml:space="preserve">
+        <value>Строка N</value>
+    </data>
+    <data name="logStarting" xml:space="preserve">
+        <value>Исходный путь</value>
+    </data>
+    <data name="logDestination" xml:space="preserve">
+        <value>Путь назначения</value>
+    </data>
+    <data name="logCopyHidden" xml:space="preserve">
+        <value>Копировать скрытые файлы</value>
+    </data>
+    <data name="logCopySystem" xml:space="preserve">
+        <value>Копировать системные файлы</value>
+    </data>
+    <data name="logCopyBetween" xml:space="preserve">
+        <value>Копировать между</value>
+    </data>
+    <data name="logChecked" xml:space="preserve">
+        <value>отмечено</value>
+    </data>
+    <data name="logMaskIs" xml:space="preserve">
+        <value>Маска</value>
+    </data>
+    <data name="logBoChecked" xml:space="preserve">
+        <value>BO (только имя файла) отмечено</value>
+    </data>
+    <data name="logMatchList" xml:space="preserve">
+        <value>Список файлов, соответствующих вашим настройкам. Нажмите кнопку "Копировать", чтобы скопировать их в путь назначения</value>
+    </data>
+    <data name="logListIsSorted" xml:space="preserve">
+        <value>Примечание: список файлов отсортирован</value>
+    </data>
+    <data name="logFileToCopy" xml:space="preserve">
+        <value>Количество новых или изменённых файлов для копирования</value>
+    </data>
+    <data name="logStopped" xml:space="preserve">
+        <value>*** Остановлено пользователем ***</value>
+    </data>
+    <data name="logFatalError" xml:space="preserve">
+        <value>Фатальная ошибка</value>
+    </data>
+    <data name="logFound" xml:space="preserve">
+        <value>Найдено</value>
+    </data>
+    <data name="logNoNew" xml:space="preserve">
+        <value>Нет новых или изменённых файлов в строке n</value>
+    </data>
+    <data name="logNotPresent" xml:space="preserve">
+        <value>Отсутствует</value>
+    </data>
+    <data name="logExisting" xml:space="preserve">
+        <value>Существует</value>
+    </data>
+    <data name="logCopied" xml:space="preserve">
+        <value>Скопировано</value>
+    </data>
+    <data name="logNoCopyErr" xml:space="preserve">
+        <value>Нет ошибок копирования</value>
+    </data>
+    <data name="logSearch" xml:space="preserve">
+        <value>Поиск даты файлов</value>
+    </data>
+    <data name="logCopy" xml:space="preserve">
+        <value>Дата копирования файлов</value>
+    </data>
+    <data name="logGotErrors" xml:space="preserve">
+        <value>Итоговый список обнаруженных ошибок</value>
+    </data>
+    <data name="logNoReadErr" xml:space="preserve">
+        <value>Нет ошибок чтения</value>
+    </data>
+    <data name="logSkippedList" xml:space="preserve">
+        <value>Итоговый список пропущенных файлов или каталогов</value>
+    </data>
+    <data name="logSkipped" xml:space="preserve">
+        <value>Пропущено</value>
+    </data>
+    <data name="logNoSkipped" xml:space="preserve">
+        <value>Нет пропущенных файлов / каталогов</value>
+    </data>
+</root>

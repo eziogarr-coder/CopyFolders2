@@ -1,0 +1,331 @@
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1094" d:DesignHeight="964"
+        x:Class="CopyFolders2.MainWindow"
+        xmlns:vm="using:CopyFolders2"
+        x:DataType="vm:MainViewModel"
+        x:CompileBindings="True"
+        Name="FrmMain"
+        Title="CopyFolders 2" 
+        SystemDecorations="Full"
+       
+        Icon="/Assets/CF2.ico"
+        
+        MaxWidth="1126"
+        MinWidth="1126"
+        MaxHeight="964"
+        
+        SizeToContent="Manual"
+        WindowStartupLocation="Manual"
+        CanResize="True" 
+        
+        Loaded="Control_OnLoaded" 
+        Opened="TopLevel_OnOpened"
+        Closing="Window_OnClosing">
+        <!-- notare il > di chiusura -->  
+        <!--********* il Font e la Size sono in App.axaml ********* -->
+        <Window.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceInclude Source="/LedStyles.axaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Window.Resources>
+        
+    <Grid x:Name="MainGrid" Margin="0" PointerPressed="MainGrid_OnPointerPressed" TextBox.TextChanged="TextBox_OnTextChanged" 
+                       Background="#e8e8e8" ComboBox.SelectionChanged="SelectingItemsControl_OnSelectionChanged" 
+                          CheckBox.Click="MainGrid_OnClick" Tapped="MainGrid_OnTapped" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1126"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="92"  MinHeight="92" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition MaxHeight="38"  MinHeight="38" />
+            <RowDefinition Height="*" /> <!-- MinHeight="120" MaxHeight="420" /> -->
+            <RowDefinition MaxHeight="74"  MinHeight="74" />
+        </Grid.RowDefinitions>
+        
+        <!-- Il contenitore esterno centra il gruppo di controlli nella finestra -->
+        <!-- Per ogni Binding va aggiunta la voce in MainViewModel.cs e in basso OnPropertyChanged!!  -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0">
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border BorderBrush= "DeepSkyBlue" BorderThickness="1.4" CornerRadius="5" VerticalAlignment="Center" >
+                    <StackPanel Orientation="Horizontal">
+                          <TextBlock Text="{Binding AlsoCopy}" Margin="6,0,0,0" />  
+                          <CheckBox Name="ChkHidden" Content="{Binding AlsoHidden}" Margin ="7,0,0,0" IsCheckedChanged="ChkHidden_OnIsCheckedChanged"></CheckBox>  
+                          <CheckBox Name="ChkSystem" Content="{Binding AlsoSystem}" Margin ="12,0,10,0" IsEnabled="False" IsCheckedChanged="ChkHidden_OnIsCheckedChanged"></CheckBox>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="DeepSkyBlue" BorderThickness="1.4" CornerRadius="5" VerticalAlignment="Center" Margin="10,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                          <CheckBox Name="ChkCheckDates" Margin ="8,0,0,0" IsCheckedChanged="ChkCheckDates_OnIsCheckedChanged"></CheckBox>     
+                          <Label Name="LblDates" Background="#e8e8e8" Content="{Binding Dates }" Height="28" Margin="-2,0,0,0" ></Label>
+                          <CalendarDatePicker Name="DateTimeFrom" SelectedDate="{Binding DateFrom}" Height="18" Margin="4,0,0,0" SelectedDateChanged="DateTimeFrom_OnSelectedDateChanged"></CalendarDatePicker>          
+                          <Label Name="LblAnd" Content="{Binding AndThe}" Background="#e8e8e8" Height="28" Margin="4,0,0,0" ></Label>
+                          <CalendarDatePicker Name="DateTimeTo" SelectedDate="{Binding DateTo}" Height="18" Margin="4,0,10,0" SelectedDateChanged="DateTimeTo_OnSelectedDateChanged"></CalendarDatePicker>            
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+        </StackPanel>
+        <!-- l' Help -->
+        <Border Grid.Row="0" BorderBrush="DeepSkyBlue" BorderThickness="1"  Margin="1054,-26,0,0"
+                CornerRadius="3" Padding="5" Height="24" Width="26" Background="WhiteSmoke" PointerPressed="InputElement_OnPointerPressed">
+            <TextBlock Text="?" FontSize="18"   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Border.ContextMenu>
+                <ContextMenu x:Name="HelpMenu">
+                    <MenuItem Header="{Binding Help}" Click="MenuHelp_OnClick">
+                        <MenuItem.Icon>
+                            <!-- Qui metti il controllo Image, che accetta il percorso -->
+                            <Image Source="Assets/mnu_help.png"  
+                                   Width="16" Height="16" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="{Binding Options}" Click="MenuInfo_OnClick" >
+                        <MenuItem.Icon>
+                            <!-- Qui metti il controllo Image, che accetta il percorso -->
+                            <Image Source="Assets/opzioni.png"  
+                                   Width="16" Height="16" />
+                        </MenuItem.Icon>  
+                    </MenuItem>
+                </ContextMenu>
+            </Border.ContextMenu>
+        </Border>
+        
+        <TextBlock Grid.Row="0" Width="60" Text="File mask" Margin="60,63,0,0" TextAlignment="Center" ToolTip.Tip="{Binding TipMask }"></TextBlock>
+        <TextBlock Grid.Row="0" Width="364" Text="{Binding CopyFrom }" Margin="130,63,0,0" TextAlignment="Center" ></TextBlock>
+        <Button Name="BtnComp" Grid.Row="0"  Width="60" Height="26" Background="#c1d0f0" Padding="4" Content="Comp" Margin="500,60,0,0" 
+                                                      Click="ButtonComp_OnClick"  ToolTip.Tip="{Binding TipComp }"></Button>
+        <TextBlock Grid.Row="0" Width="20" Text="BO" Margin="570,63,0,0" ToolTip.Tip="{Binding TipBasename }" ></TextBlock>
+        <TextBlock Grid.Row="0" Width="20" Text="AB" Margin="600,63,0,0" ToolTip.Tip="{Binding TipAutoBase }" ></TextBlock>
+        <TextBlock Grid.Row="0" Width="364" Text="{Binding CopyTo }" Margin="626,63,0,0" TextAlignment="Center" ></TextBlock>
+        <TextBlock Grid.Row="0" Width="30" Text="Bkps" Margin="1003,63,0,0" ToolTip.Tip="{Binding TipBkps }" ></TextBlock>
+        
+        <Border Grid.Row="1" Background="#e2e2e2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Text="1" Grid.Row="1" Background="#e2e2e2"  Margin="12,1,0,0" VerticalAlignment="Center"/>
+        <CheckBox Name="ChkC1" Grid.Row="1" Tag="1" Margin="29,0,0,0" />
+        <TextBox Name="Mask1" Grid.Row="1" Text="*" Tag="1" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart1" Grid.Row="1" Content="Path1" Tag="1" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="1" Name="PbStartPath1" Tag="1" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="1" Name="PbDelStart1" Tag="1" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo1" Grid.Row="1" Tag="1" Margin="570,0,0,0" />
+        <Image Grid.Row="1" Name="ImgAdd1" Tag="1" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest1" Grid.Row="1" Content="Path1" Tag="1" Height="28" Width="363" Margin="627,0,0,0"  BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk1" Tag="1" Margin="998,0,0,0" Grid.Row="1" VerticalAlignment="Center" />
+        <Image Grid.Row="1" Name="PbDestPath1" Tag="1" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="1" Name="PbDelDest1" Tag="1" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+     
+        <TextBlock Text="2" Grid.Row="2" Background="#e8e8e8"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC2" Grid.Row="2" Tag="2" Margin="29,0,0,0" />
+        <TextBox Name="Mask2" Grid.Row="2" Text="*" Tag="2" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart2" Grid.Row="2" Content="Path2" Tag="2" Height="28" Width="364" Margin="132,0,0,0"  BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="2" Name="PbStartPath2" Tag="2" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="2" Name="PbDelStart2" Tag="2" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo2" Grid.Row="2" Tag="2" Margin="570,0,0,0" />
+        <Image Grid.Row="2" Name="ImgAdd2" Tag="2" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest2" Grid.Row="2" Content="Path2" Tag="2" Height="28" Width="363" Margin="627,0,0,0"  BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk2" Tag="2" Margin="998,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+        <Image Grid.Row="2" Name="PbDestPath2" Tag="2" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="2" Name="PbDelDest2" Tag="2" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <Border Grid.Row="3" Background="#e2e2e2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Text="3" Grid.Row="3" Background="#e2e2e2" Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC3" Grid.Row="3" Tag="3" Margin="29,0,0,0" />
+        <TextBox Name="Mask3" Grid.Row="3" Text="*" Tag="3" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart3" Grid.Row="3" Content="Path3" Tag="3" Height="28" Width="364" Margin="132,0,0,0"  BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="3" Name="PbStartPath3" Tag="3" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="3" Name="PbDelStart3" Tag="3" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo3" Grid.Row="3" Tag="3" Margin="570,0,0,0" />
+        <Image Grid.Row="3" Name="ImgAdd3" Tag="3" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest3" Grid.Row="3" Content="Path3" Height="28" Width="363" Margin="627,0,0,0"  BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk3" Tag="3" Margin="998,0,0,0" Grid.Row="3" VerticalAlignment="Center" />
+        <Image Grid.Row="3" Name="PbDestPath3" Tag="3" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="3" Name="PbDelDest3" Tag="3" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <TextBlock Text="4" Grid.Row="4" Background="#e8e8e8"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC4" Grid.Row="4" Tag="4" Margin="29,0,0,0" />
+        <TextBox Name="Mask4" Grid.Row="4" Text="*" Tag="4" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart4" Grid.Row="4" Content="Path4" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="4" Name="PbStartPath4" Tag="4" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="4" Name="PbDelStart4" Tag="4" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo4" Grid.Row="4" Tag="4" Margin="570,0,0,0" />
+        <Image Grid.Row="4" Name="ImgAdd4" Tag="4" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest4" Grid.Row="4" Content="Path4" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk4" Tag="4" Margin="998,0,0,0" Grid.Row="4" VerticalAlignment="Center" />
+        <Image Grid.Row="4" Name="PbDestPath4" Tag="4" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="4" Name="PbDelDest4" Tag="4" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <Border Grid.Row="5" Background="#e2e2e2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Text="5" Grid.Row="5" Background="#e2e2e2"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC5" Grid.Row="5" Tag="5" Margin="29,0,0,0" />
+        <TextBox Name="Mask5" Grid.Row="5" Text="*" Tag="5" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart5" Grid.Row="5" Content="Path4" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="5" Name="PbStartPath5" Tag="5" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="5" Name="PbDelStart5" Tag="5" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo5" Grid.Row="5" Tag="5" Margin="570,0,0,0" />
+        <Image Grid.Row="5" Name="ImgAdd5" Tag="5" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest5" Grid.Row="5" Content="Path4" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk5" Tag="5" Margin="998,0,0,0" Grid.Row="5" VerticalAlignment="Center" />
+        <Image Grid.Row="5" Name="PbDestPath5" Tag="5" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="5" Name="PbDelDest5" Tag="5" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <TextBlock Text="6" Grid.Row="6"  Background="#e8e8e8"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC6" Grid.Row="6" Tag="6" Margin="29,0,0,0"></CheckBox>
+        <TextBox Name="Mask6" Grid.Row="6" Text="*" Tag="6" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart6" Grid.Row="6" Content="Path4" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="6" Name="PbStartPath6" Tag="6" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="6" Name="PbDelStart6" Tag="6" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo6" Grid.Row="6" Tag="6" Margin="570,0,0,0" />
+        <Image Grid.Row="6" Name="ImgAdd6" Tag="6" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest6" Grid.Row="6" Content="Path4" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk6" Tag="6" Margin="998,0,0,0" Grid.Row="6" VerticalAlignment="Center" />
+        <Image Grid.Row="6" Name="PbDestPath6" Tag="6" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="6" Name="PbDelDest6" Tag="6" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <Border Grid.Row="7" Background="#e2e2e2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Text="7" Grid.Row="7" Background="#e2e2e2"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC7" Grid.Row="7" Tag="7" Margin="29,0,0,0" />
+        <TextBox Name="Mask7" Grid.Row="7" Text="*" Tag="7" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart7" Grid.Row="7" Content="Path4" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="7" Name="PbStartPath7" Tag="7" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="7" Name="PbDelStart7" Tag="7" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo7" Grid.Row="7" Tag="7" Margin="570,0,0,0" />
+        <Image Grid.Row="7" Name="ImgAdd7" Tag="7" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest7" Grid.Row="7" Content="Path4" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk7" Tag="7" Margin="998,0,0,0" Grid.Row="7" VerticalAlignment="Center" />
+        <Image Grid.Row="7" Name="PbDestPath7" Tag="7" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="7" Name="PbDelDest7" Tag="7" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <TextBlock Text="8" Grid.Row="8" Background="#e8e8e8"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC8" Grid.Row="8" Tag="8" Margin="29,0,0,0" />
+        <TextBox Name="Mask8" Grid.Row="8" Text="*" Tag="8" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart8" Grid.Row="8" Content="Path8" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="8" Name="PbStartPath8" Tag="8" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="8" Name="PbDelStart8" Tag="8" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo8" Grid.Row="8" Tag="8" Margin="570,0,0,0" />
+        <Image Grid.Row="8" Name="ImgAdd8" Tag="8" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest8" Grid.Row="8" Content="Path8" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk8" Tag="8" Margin="998,0,0,0" Grid.Row="8" VerticalAlignment="Center" />
+        <Image Grid.Row="8" Name="PbDestPath8" Tag="8" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="8" Name="PbDelDest8" Tag="8" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        
+        <Border Grid.Row="9" Background="#e2e2e2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Text="9" Grid.Row="9" Background="#e2e2e2"  Margin="12,1,0,0"/>
+        <CheckBox Name="ChkC9" Grid.Row="9" Tag="9" Margin="29,0,0,0" />
+        <TextBox Name="Mask9" Grid.Row="9" Text="*" Tag="9" Margin="56,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" MinHeight="0" Height="28" Width="69" />
+        <Label Name="LblStart9" Grid.Row="9" Content="Path9" Height="28" Width="364" Margin="132,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <Image Grid.Row="9" Name="PbStartPath9" Tag="9" Source="Assets/Folder.png" Margin="503,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="9" Name="PbDelStart9" Tag="9" Source="Assets/Disable.png" Margin="538,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+        <CheckBox Name="ChkTo9" Grid.Row="9" Tag="9" Margin="570,0,0,0" />
+        <Image Grid.Row="9" Name="ImgAdd9" Tag="9" Source="Assets/add.png" Margin="599,0,0,0" Height="20" Width="20" Stretch="Uniform"/>
+        <Label Name="LblDest9" Grid.Row="9" Content="Path9" Height="28" Width="363" Margin="627,0,0,0" BorderBrush="DimGray" BorderThickness="1" CornerRadius="3"/>
+        <ComboBox Name="CmbBk9" Tag="9" Margin="998,0,0,0" Grid.Row="9" VerticalAlignment="Center" />
+        <Image Grid.Row="9" Name="PbDestPath9" Tag="9" Source="Assets/Folder.png" Margin="1050,0,0,0" Height="32" Width="32" Stretch="Uniform"/>
+        <Image Grid.Row="9" Name="PbDelDest9" Tag="9" Source="Assets/Disable.png" Margin="1086,0,0,0" Height="19" Width="19" Stretch="Uniform"/>
+  
+        <Border Grid.Row="10" Name="TxtBorder" Background="Bisque" VerticalAlignment="Stretch" SizeChanged="TxtBorder_OnSizeChanged" />
+        <TextBox Name="TxtFiles" Text="" Tag="22" Grid.Row="10" IsReadOnly="True" Margin="15,10,15,10" TextWrapping="Wrap"
+              BorderBrush= "DeepSkyBlue" CornerRadius="5" AcceptsReturn="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Top"/>
+     
+        <ProgressBar Grid.Row="11" Name="Bar" Width="370" Height="10" HorizontalAlignment="Left" Margin="140,6,0,0" IsVisible="False" >
+            <!-- Inseriscilo qui -->
+            <ProgressBar.Transitions>
+                <Transitions>
+                    <DoubleTransition Property="Value" 
+                                      Duration="0:0:0.3" 
+                                      Easing="CubicEaseOut"/>
+                </Transitions>
+            </ProgressBar.Transitions>
+            <!-- L'effetto onda (Shimmer) -->
+            <ProgressBar.Foreground>
+                <LinearGradientBrush StartPoint="0%,0%" EndPoint="200%,0%">
+                    <GradientStop Offset="0.0" Color="#0078d4" /> <!-- Blu Base -->
+                    <GradientStop Offset="0.5" Color="#60ccff" /> <!-- Onda di Luce -->
+                    <GradientStop Offset="1.0" Color="#0078d4" /> <!-- Blu Base -->
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+
+            <ProgressBar.Styles>
+                <Style Selector="ProgressBar">
+                    <Style.Animations>
+                        <!-- Animazione che sposta il gradiente da sinistra a destra -->
+                        <Animation Duration="0:0:2" IterationCount="Infinite">
+                            <KeyFrame Cue="0%">
+                                <Setter Property="Foreground">
+                                    <LinearGradientBrush StartPoint="-100%,0%" EndPoint="0%,0%">
+                                        <GradientStop Offset="0.0" Color="#0078d4" />
+                                        <GradientStop Offset="0.5" Color="#60ccff" />
+                                        <GradientStop Offset="1.0" Color="#0078d4" />
+                                    </LinearGradientBrush>
+                                </Setter>
+                            </KeyFrame>
+                            <KeyFrame Cue="100%">
+                                <Setter Property="Foreground">
+                                    <LinearGradientBrush StartPoint="100%,0%" EndPoint="200%,0%">
+                                        <GradientStop Offset="0.0" Color="#0078d4" />
+                                        <GradientStop Offset="0.5" Color="#60ccff" />
+                                        <GradientStop Offset="1.0" Color="#0078d4" />
+                                    </LinearGradientBrush>
+                                </Setter>
+                            </KeyFrame>
+                        </Animation>
+                    </Style.Animations>
+                </Style>
+            </ProgressBar.Styles>
+        </ProgressBar>
+        
+        <TextBlock Grid.Row="11" Name="BlockPercent" Text="0.00%" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="516,0,0,25" IsVisible="False"></TextBlock>
+        <TextBlock Grid.Row="11" Text="{Binding Rows}" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Margin="0,0,420,25"></TextBlock>
+        <ComboBox Name="CmbRows" SelectionChanged="CmbRows_OnSelectionChanged" Margin="715,0,0,21" Grid.Row="11" VerticalAlignment="Bottom" />
+        <Button Name="BtnStart" Content="{Binding List}" Click="BtnStart_OnClick" Height="30"  Margin="775,0,0,20" Grid.Row="11" 
+               IsVisible="True" VerticalAlignment="Bottom" Width="115">
+            <Button.Styles>
+                <!-- Stato Normale -->
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="#c1d0f0" />
+                </Style>
+                <!-- Stato Hover -->
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="#c6d6f6" />
+                </Style>
+            </Button.Styles>
+        </Button>
+        <Button Name="BtnCopy" Content="{Binding Copy}" Click="BtnCopy_OnClick" Height="30" Margin="899,0,0,20" Grid.Row="11" 
+               IsVisible="True" VerticalAlignment="Bottom" Width="116">
+            <Button.Styles>
+                <!-- Stato Normale -->
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="#b9c6be" />
+                </Style>
+                <!-- Stato Hover -->
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="#c6d2c2" />
+                </Style>
+            </Button.Styles>
+        </Button>
+        <Button Name="BtnClose" Content="{Binding Close}" Click="BtnClose_OnClick" Height="30" Margin="1024,0,0,20" Grid.Row="11" VerticalAlignment="Bottom" Width="87"/>
+        <Button Name="BtnOpen" Content="{Binding Open}" Click="BtnOpen_OnClick" Height="30" Margin="14,0,0,20" Grid.Row="11" VerticalAlignment="Bottom" Width="118"/>
+        <!-- i led -->
+        <TemplatedControl Grid.Row="11" Template="{StaticResource LedVerde}"  Margin="452,4,0,0"
+                          IsVisible="{Binding #BtnStart.Focusable}" />
+        <TemplatedControl Grid.Row="11" Template="{StaticResource LedVerdeSpento}" Margin="452,4,0,0" 
+                          IsVisible="{Binding !#BtnStart.Focusable}" /> 
+        <TemplatedControl Grid.Row="11" Template="{StaticResource LedVerde}" Margin="700,4,0,0"
+                          IsVisible="{Binding #BtnCopy.Focusable}" />
+        <TemplatedControl Grid.Row="11" Template="{StaticResource LedVerdeSpento}" Margin="700,4,0,0" 
+                          IsVisible="{Binding !#BtnCopy.Focusable}" /> 
+        
+    </Grid>
+        
+</Window>

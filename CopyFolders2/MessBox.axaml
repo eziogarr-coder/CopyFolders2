@@ -1,0 +1,43 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="345" d:DesignHeight="260"
+        x:Class="CopyFolders2.MessBox"
+        xmlns:vm="using:CopyFolders2"
+        x:DataType="vm:MainViewModel"
+        x:CompileBindings="True"
+        Title="CopyFolders2"
+        FontSize="13"
+        FontFamily="Segoe UI"
+        Background="#e8e8e8"
+       
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        Width="338"
+        MaxHeight="260"
+        MinHeight="150"
+        CanResize="False"> 
+        
+        <Grid x:Name="MsgGrid"  Width="338" VerticalAlignment="Top" >
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="338"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" MaxHeight="210"  MinHeight="100"  />
+                        <RowDefinition MaxHeight="50"  MinHeight="50" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="DeepSkyBlue" CornerRadius="3" BorderThickness="1" Background="WhiteSmoke" Margin="14">
+                        <StackPanel Orientation="Horizontal">
+                        <Image Name="MsgImg" Source="avares://CopyFolders2/Assets/info.png" Width="32" Height="32" VerticalAlignment="Top" 
+                                    Margin="10,10,0,0" />
+                             <TextBlock Name="TxtMsg" Text="Testo" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,4,0,6" 
+                                        Padding="4,0,4,0"  Width="260"></TextBlock>
+                       </StackPanel>
+                </Border>
+                <Button Grid.Row="1" Name="BtnYes"  Height="28" Width="70" Margin="171,-5,0,0" Click="Yes_OnClick" ></Button>
+                <Button Grid.Row="1" Name="BtnClose" Height="28" Width="70" Margin="254,-5,0,0" Click="Close_OnClick"></Button>                      
+        </Grid>
+ 
+</Window>

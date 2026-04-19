@@ -1,0 +1,14 @@
+﻿# Cartelle di compilazione
+bin/
+obj/
+
+# File di Rider e Visual Studio
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# File di sistema
+.DS_Store
+Thumbs.db

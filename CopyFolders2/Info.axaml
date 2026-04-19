@@ -1,0 +1,53 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="340" d:DesignHeight="250"
+        xmlns:vm="using:CopyFolders2"
+        x:Class="CopyFolders2.Info"
+        x:DataType="vm:MainViewModel" 
+        x:CompileBindings="True"
+        Title="CF2 Info"
+        FontSize="13"
+        FontFamily="Segoe UI"
+        Background="#e8e8e8"
+        SizeToContent="Manual"
+        WindowStartupLocation="CenterScreen"
+        Width="340"
+        Height="250"
+        CanResize="False"
+        
+        Opened="TopLevel_OnOpened">
+    
+    <Grid x:Name="InfoGrid" Height="250" Width="340" VerticalAlignment="Top" >
+           <Image Height="32" Width="32" Source="avares://CopyFolders2/Assets/CF2.ico" VerticalAlignment="Top" Margin="30,10,0,0"></Image>  
+           <TextBlock Text="CopyFolders 2" FontSize="19"  Margin="120,10,0,0" VerticalAlignment="Top"></TextBlock>
+           <TextBlock Text="{Binding Version}" FontSize="12"  Margin="160,35,0,0" VerticalAlignment="Top"></TextBlock>
+            
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Margin="0,70,0,0">
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding InfoLangs}" Margin="30,5, 10,0"></TextBlock>
+                    <ComboBox Name="CmbLang" HorizontalAlignment="Left" Width="105" SelectionChanged="CmbLang_OnSelectionChanged" >
+                        <ComboBoxItem Name="En" Content="{Binding En}" />
+                        <ComboBoxItem Name="De" Content="{Binding De}" />
+                        <ComboBoxItem Name="Fr" Content="{Binding Fr}" />
+                        <ComboBoxItem Name="It" Content="{Binding It}" />
+                        <ComboBoxItem Name="Es" Content="{Binding Es}" />
+                        <ComboBoxItem Name="Pl" Content="{Binding Pl}" />
+                        <ComboBoxItem Name="Pt" Content="{Binding Pt}" />
+                        <ComboBoxItem Name="Ru" Content="{Binding Ru}" /> 
+                        <ComboBoxItem Name="Zh" Content="{Binding Zh}" /> 
+                    </ComboBox>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,6,0,0">
+                    <CheckBox Name="ChkInf" Margin="30,0,6,0" IsCheckedChanged="ChkInf_OnIsCheckedChanged" ></CheckBox>
+                    <TextBlock Text="{Binding ChkUpd}" Margin="0,6, 4,0"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+        <Button Name="BtnCheck" Content="{Binding CheckNow}" Height="30" Background="LightSteelBlue" Width="240" VerticalAlignment="Bottom" 
+                HorizontalAlignment="Center" Margin="0,0,0,75"  Click="BtnCheck_OnClick"></Button>
+        <Button Name="BtnClose" Content="{Binding Close}" Height="30" Width="90" VerticalAlignment="Bottom" 
+                        HorizontalAlignment="Right" Margin="0,0,22,18" Click="BtnClose_OnClick"></Button>
+        <HyperlinkButton Content="psmate.com" Margin="21,175,0,0" NavigateUri="https://psmate.com/" />
+        </Grid>
+</Window>

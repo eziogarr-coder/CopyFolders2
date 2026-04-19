@@ -1,0 +1,103 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Dates" xml:space="preserve">
+        <value>Nur Dateien kopieren, die zwischen dem</value>
+    </data>
+    <data name="CloseButton" xml:space="preserve">
+        <value>Schließen</value>
+    </data>
+    <data name="AndThe" xml:space="preserve">
+        <value>und das</value>
+    </data>
+    <data name="CopyFrom" xml:space="preserve">
+        <value>Alle neuen oder geänderten Dateien aus diesen Ordnern kopieren...</value>
+    </data>
+    <data name="CopyTo" xml:space="preserve">
+        <value>... in diese (Unterverzeichnisse werden automatisch erstellt)</value>
+    </data>
+    <data name="TipMask" xml:space="preserve">
+        <value>Geben Sie Buchstaben und/oder Platzhalterzeichen ein, um Dateinamen zu filtern. 
+Beginnen Sie mit "!=" für eine Negativsuche (siehe Hilfe)</value>
+    </data>
+    <data name="InfoLangs" xml:space="preserve">
+        <value>Sprache auswählen:</value>
+    </data>
+    <data name="CheckUpdates" xml:space="preserve">
+        <value>Automatisch nach Updates suchen</value>
+    </data>
+    <data name="Rows" xml:space="preserve">
+        <value>Anzuzeigende Zeilen</value>
+    </data>
+    <data name="CheckNow" xml:space="preserve">
+        <value>Jetzt nach Updates suchen</value>
+    </data>
+    <data name="UpToDate" xml:space="preserve">
+        <value>Das Programm ist aktuell</value>
+    </data>
+    <data name="Yes" xml:space="preserve">
+        <value>Ja</value>
+    </data>
+    <data name="PressStart" xml:space="preserve">
+        <value>Drücken Sie die Schaltfläche "Auflisten", um die Liste der ausgewählten Dateien zu erstellen. Drücken Sie erneut die Schaltfläche "Auflisten" oder die Taste "Esc", um die Verarbeitung jederzeit zu unterbrechen.</value>
+    </data>
+    <data name="aborted" xml:space="preserve">
+        <value>Die Datenverarbeitung wurde vom Benutzer abgebrochen</value>
+    </data>
+    <data name="TipBasename" xml:space="preserve">
+        <value>Nur Basename: Wenn ausgewählt, werden nur die Dateien des Ziel-Basename-Ordners kopiert (Unterordner werden ausgeschlossen)</value>
+    </data>
+    <data name="TipComp" xml:space="preserve">
+        <value>Komprimieren: Entfernt leere Zeilen, indem die gefüllten Zeilen nach oben verschoben werden</value>
+    </data>
+    <data name="PressCopy" xml:space="preserve">
+        <value>Drücken Sie "Kopieren", um die aufgelisteten Dateien zu kopieren, wenn sie neu oder geändert sind. Drücken Sie die Schaltfläche "Auflisten" oder die Taste "Esc", um zur Auflistung zurückzukehren oder den laufenden Kopiervorgang abzubrechen.</value>
+    </data>
+    <data name="TipAutoBase" xml:space="preserve">
+        <value>Auto-Basename: Klicken Sie auf ein Bild, um den Basename-Ordner des Quellpfads (des letzten) automatisch in den Zielpfad einzufügen.
+Klicken Sie mit gedrückter linker Alt-Taste, um den letzten Basisnamen aus dem Zielpfad zu entfernen</value>
+    </data>
+    <data name="Options" xml:space="preserve">
+        <value>Optionen</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>Hilfe</value>
+    </data>
+    <data name="List" xml:space="preserve">
+        <value>Auflisten</value>
+    </data>
+    <data name="CopyButton" xml:space="preserve">
+        <value>Kopieren</value>
+    </data>
+    <data name="TipBkps" xml:space="preserve">
+        <value>Wählen Sie die Anzahl vorheriger Sicherungsdateiversionen aus, die gespeichert werden sollen</value>
+    </data>
+    <data name="AlsoHidden" xml:space="preserve">
+        <value>Versteckte</value>
+    </data>
+    <data name="AlsoSystem" xml:space="preserve">
+        <value>Systemdateien</value>
+    </data>
+    <data name="AlsoCopy" xml:space="preserve">
+        <value>Auch diese Dateien kopieren:</value>
+    </data>
+    <data name="OpenButton" xml:space="preserve">
+        <value>CF2.log öffnen</value>
+    </data>
+    <data name="UpdateError" xml:space="preserve">
+        <value>Fehler beim Lesen der Updates. Versuchen Sie es später erneut.</value>
+    </data>
+    <data name="Wait" xml:space="preserve">
+        <value>Bitte warten</value>
+    </data>
+</root>

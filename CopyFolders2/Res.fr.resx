@@ -1,0 +1,213 @@
+﻿<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="AppName" xml:space="preserve">
+        <value>CopyFolders2</value>
+    </data>
+    <data name="Update" xml:space="preserve">
+        <value>Est disponible une mise à jour du programme.
+Cliquez sur "Oui" si vous souhaitez la télécharger maintenant, sinon cliquez sur "No".</value>
+    </data>
+    <data name="CriticalError" xml:space="preserve">
+        <value>Erreur critique</value>
+    </data>
+    <data name="Error" xml:space="preserve">
+        <value>Erreur</value>
+    </data>
+    <data name="WillClosed" xml:space="preserve">
+        <value>CopyFolders2 sera fermé.</value>
+    </data>
+    <data name="Unhandled" xml:space="preserve">
+        <value>Erreur non gérée </value>
+    </data>
+    <data name="msg_SamePaths" xml:space="preserve">
+        <value>Le chemin de départ et le chemin d'arrivée doivent être différents !</value>
+    </data>
+    <data name="msg_DontExist" xml:space="preserve">
+        <value>Un ou plusieurs dossiers précédemment sélectionnés n'existent plus (fond rouge).</value>
+    </data>
+    <data name="msg_BothEmpty" xml:space="preserve">
+        <value>Le contrôle ne devient cliquable que si les dossiers source et de destination ont été définis !</value>
+    </data>
+    <data name="AlmostOne" xml:space="preserve">
+        <value>Vous devez cocher au moins une ligne !</value>
+    </data>
+    <data name="msg_NoWildCards" xml:space="preserve">
+        <value>Les jokers ne sont pas autorisés dans les masques négatifs! Consultez l’ Aide.</value>
+    </data>
+    <data name="msg_Running" xml:space="preserve">
+        <value>Le programme est déjà en cours d'exécution !</value>
+    </data>
+    <data name="SelectFolder" xml:space="preserve">
+        <value>Sélectionnez un dossier</value>
+    </data>
+    <data name="msg_NoBasename" xml:space="preserve">
+        <value>Le chemin de départ ne contient pas de dossier de nom de base!</value>
+    </data>
+    <data name="msg_NoLog" xml:space="preserve">
+        <value>Aucun fichier .log pour le moment</value>
+    </data>
+    <data name="msg_Erased" xml:space="preserve">
+        <value>Toutes les données de configuration seront effacées.</value>
+    </data>
+    <data name="txtRowN" xml:space="preserve">
+        <value>Ligne n.</value>
+    </data>
+    <data name="txtStartingPath" xml:space="preserve">
+        <value>path de départ</value>
+    </data>
+    <data name="txtDoneIn" xml:space="preserve">
+        <value>vérification des fichiers effectuée dans</value>
+    </data>
+    <data name="txtSeconds" xml:space="preserve">
+        <value>secondes</value>
+    </data>
+    <data name="txtFound" xml:space="preserve">
+        <value>Trouvés</value>
+    </data>
+    <data name="txtAccessibleFiles" xml:space="preserve">
+        <value>fichiers accessibles dans</value>
+    </data>
+    <data name="txtAccessibleDir" xml:space="preserve">
+        <value>répertoires accessibles pour une taille de</value>
+    </data>
+    <data name="txtSkipping" xml:space="preserve">
+        <value>Un instant s'il vous plaît, je filtre les fichiers non modifiés...</value>
+    </data>
+    <data name="txtTotSeconds" xml:space="preserve">
+        <value>secondes au total</value>
+    </data>
+    <data name="txtNewSize" xml:space="preserve">
+        <value>fichiers nouveaux ou modifiés pour une taille de</value>
+    </data>
+    <data name="txtTotalFound" xml:space="preserve">
+        <value>Rapport total: trouvés</value>
+    </data>
+    <data name="txtNewTotSize" xml:space="preserve">
+        <value>fichiers nouveaux ou modifiés pour une taille totale de</value>
+    </data>
+    <data name="txtNewNoSize" xml:space="preserve">
+        <value>fichiers nouveaux ou modifié</value>
+    </data>
+    <data name="txtNoFileToCopy" xml:space="preserve">
+        <value>Aucun fichier à copier: le bouton "Copier" est désactivé.</value>
+    </data>
+    <data name="txtPressOpen" xml:space="preserve">
+        <value>Appuyez sur le bouton "Ouvrir CF2.log" pour lire la liste des fichiers</value>
+    </data>
+    <data name="txtStartCopy" xml:space="preserve">
+        <value>Copie en cours</value>
+    </data>
+    <data name="txtCopyinErr" xml:space="preserve">
+        <value>erreurs de copie</value>
+    </data>
+    <data name="txtNoCopyErr" xml:space="preserve">
+        <value>aucune erreur de copie</value>
+    </data>
+    <data name="txtCopied" xml:space="preserve">
+        <value>Copiés</value>
+    </data>
+    <data name="txtOver" xml:space="preserve">
+        <value>sur</value>
+    </data>
+    <data name="msg_CantCheck" xml:space="preserve">
+        <value>Impossible de cocher la case: le chemin de départ n'existe plus!</value>
+    </data>
+    <data name="txtPressOpen2" xml:space="preserve">
+        <value>Erreurs et fichiers ignorés au bas de la liste</value>
+    </data>
+    <data name="txtDoneOut" xml:space="preserve">
+        <value>copie réalisée en</value>
+    </data>
+    <data name="logRowN" xml:space="preserve">
+        <value>Ligne N</value>
+    </data>
+    <data name="logStarting" xml:space="preserve">
+        <value>Le chemin de départ est</value>
+    </data>
+    <data name="logDestination" xml:space="preserve">
+        <value>Le chemin de destination est</value>
+    </data>
+    <data name="logCopyHidden" xml:space="preserve">
+        <value>Copier les fichiers cachés</value>
+    </data>
+    <data name="logCopySystem" xml:space="preserve">
+        <value>Copier les fichiers système</value>
+    </data>
+    <data name="logCopyBetween" xml:space="preserve">
+        <value>Copier entre</value>
+    </data>
+    <data name="logChecked" xml:space="preserve">
+        <value>coché</value>
+    </data>
+    <data name="logMaskIs" xml:space="preserve">
+        <value>Le masque est</value>
+    </data>
+    <data name="logBoChecked" xml:space="preserve">
+        <value>BO (nom de base uniquement) est vérifié</value>
+    </data>
+    <data name="logMatchList" xml:space="preserve">
+        <value>Liste des fichiers correspondant à vos paramètres. Appuyez sur le bouton "Copier" pour les copier vers le chemin de destination</value>
+    </data>
+    <data name="logListIsSorted" xml:space="preserve">
+        <value>Remarque: la liste des fichiers est triée</value>
+    </data>
+    <data name="logFileToCopy" xml:space="preserve">
+        <value>Nombre de nouveaux fichiers ou modifiés à copier</value>
+    </data>
+    <data name="logStopped" xml:space="preserve">
+        <value>*** Arrêté par l'utilisateur ***</value>
+    </data>
+    <data name="logFatalError" xml:space="preserve">
+        <value>Erreur fatale</value>
+    </data>
+    <data name="logFound" xml:space="preserve">
+        <value>Trouvé</value>
+    </data>
+    <data name="logNoNew" xml:space="preserve">
+        <value>Pas de fichiers nouveaux ou modifiés dans la ligne n</value>
+    </data>
+    <data name="logNotPresent" xml:space="preserve">
+        <value>Non présent</value>
+    </data>
+    <data name="logExisting" xml:space="preserve">
+        <value>Existant</value>
+    </data>
+    <data name="logCopied" xml:space="preserve">
+        <value>Copié</value>
+    </data>
+    <data name="logNoCopyErr" xml:space="preserve">
+        <value>Aucune erreur de copie</value>
+    </data>
+    <data name="logSearch" xml:space="preserve">
+        <value>Recherche de la date des fichiers</value>
+    </data>
+    <data name="logCopy" xml:space="preserve">
+        <value>Date de la copie des fichiers</value>
+    </data>
+    <data name="logGotErrors" xml:space="preserve">
+        <value>Liste finale des erreurs détectées</value>
+    </data>
+    <data name="logNoReadErr" xml:space="preserve">
+        <value>Aucune erreur de lecture</value>
+    </data>
+    <data name="logSkippedList" xml:space="preserve">
+        <value>Liste finale des fichiers ou répertoires ignorés</value>
+    </data>
+    <data name="logSkipped" xml:space="preserve">
+        <value>Ignoré</value>
+    </data>
+    <data name="logNoSkipped" xml:space="preserve">
+        <value>Aucun fichier / répertoire ignoré</value>
+    </data>
+</root>

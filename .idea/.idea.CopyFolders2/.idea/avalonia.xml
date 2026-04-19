@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaApplication1/App.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="AvaloniaApplication1/MainWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="CopyFolders2/App.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+        <entry key="CopyFolders2/FolderTreeWindow.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+        <entry key="CopyFolders2/Info.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+        <entry key="CopyFolders2/LedStyles.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+        <entry key="CopyFolders2/MainWindow.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+        <entry key="CopyFolders2/MessBox.axaml" value="CopyFolders2/CopyFolders2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

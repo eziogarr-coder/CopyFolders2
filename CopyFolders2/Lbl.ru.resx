@@ -1,0 +1,103 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Dates" xml:space="preserve">
+        <value>Копировать только новые или изменённые файлы</value>
+    </data>
+    <data name="CloseButton" xml:space="preserve">
+        <value>Закрыть</value>
+    </data>
+    <data name="AndThe" xml:space="preserve">
+        <value>и</value>
+    </data>
+    <data name="CopyFrom" xml:space="preserve">
+        <value>Копировать все новые или изменённые файлы из этих папок...</value>
+    </data>
+    <data name="CopyTo" xml:space="preserve">
+        <value>... в эти (подкаталоги будут созданы автоматически)</value>
+    </data>
+    <data name="TipMask" xml:space="preserve">
+        <value>Введите буквы и/или шаблонные символы для фильтрации имён файлов. 
+Начните с "!=" для отрицательного поиска (см. Руководство)</value>
+    </data>
+    <data name="InfoLangs" xml:space="preserve">
+        <value>Выберите язык:</value>
+    </data>
+    <data name="CheckUpdates" xml:space="preserve">
+        <value>Автоматически искать обновления</value>
+    </data>
+    <data name="Rows" xml:space="preserve">
+        <value>Строки для отображения</value>
+    </data>
+    <data name="CheckNow" xml:space="preserve">
+        <value>Проверить обновления сейчас</value>
+    </data>
+    <data name="UpToDate" xml:space="preserve">
+        <value>Программа обновлена</value>
+    </data>
+    <data name="Yes" xml:space="preserve">
+        <value>Да</value>
+    </data>
+    <data name="PressStart" xml:space="preserve">
+        <value>Нажмите кнопку "Список" чтобы сгенерировать список выбранных файлов. Нажмите кнопку "Список" снова или клавишу "Esc", чтобы прервать обработку в любой момент.</value>
+    </data>
+    <data name="aborted" xml:space="preserve">
+        <value>Обработка данных была прервана пользователем</value>
+    </data>
+    <data name="TipBasename" xml:space="preserve">
+        <value>Только базовое имя: если выбрано, копируются только файлы из целевой папки базового имени (исключая подпапки)</value>
+    </data>
+    <data name="TipComp" xml:space="preserve">
+        <value>Сжатие: удаляет пустые строки, сжимая заполненные в верхней части</value>
+    </data>
+    <data name="PressCopy" xml:space="preserve">
+        <value>Нажмите "Копировать", чтобы скопировать перечисленные файлы, если они новые или изменённые. Нажмите кнопку "Список" или клавишу "Esc", чтобы вернуться к списку или отменить текущую копию файлов.</value>
+    </data>
+    <data name="TipAutoBase" xml:space="preserve">
+        <value>Авто базовое имя: щёлкните по изображению, чтобы автоматически вставить папку базового имени из исходного пути (последнего) в путь назначения.
+Нажмите левую клавишу Alt и щелкните мышью, чтобы удалить последнее имя базы из целевого пути</value>
+    </data>
+    <data name="Options" xml:space="preserve">
+        <value>Настройки</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>Справка</value>
+    </data>
+    <data name="List" xml:space="preserve">
+        <value>Список</value>
+    </data>
+    <data name="CopyButton" xml:space="preserve">
+        <value>Копировать</value>
+    </data>
+    <data name="TipBkps" xml:space="preserve">
+        <value>Выберите количество предыдущих версий файлов резервной копии для сохранения</value>
+    </data>
+    <data name="AlsoHidden" xml:space="preserve">
+        <value>Скрытые</value>
+    </data>
+    <data name="AlsoSystem" xml:space="preserve">
+        <value>Системные</value>
+    </data>
+    <data name="AlsoCopy" xml:space="preserve">
+        <value>Также копировать файлы:</value>
+    </data>
+    <data name="OpenButton" xml:space="preserve">
+        <value>Открыть CF2.log</value>
+    </data>
+    <data name="UpdateError" xml:space="preserve">
+        <value>Ошибка при чтении обновлений. Повторите попытку позже.</value>
+    </data>
+    <data name="Wait" xml:space="preserve">
+        <value>пожалуйста, подождите</value>
+    </data>
+</root>

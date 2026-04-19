@@ -1,0 +1,213 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Error" xml:space="preserve">
+        <value>Erro</value>
+    </data>
+    <data name="CriticalError" xml:space="preserve">
+        <value>Erro crítico</value>
+    </data>
+    <data name="WillClosed" xml:space="preserve">
+        <value>CopyFolders2 será fechado.</value>
+    </data>
+    <data name="AppName" xml:space="preserve">
+        <value>CopyFolders2</value>
+    </data>
+    <data name="Unhandled" xml:space="preserve">
+        <value>Erro não tratado</value>
+    </data>
+    <data name="SelectFolder" xml:space="preserve">
+        <value>Selecione uma pasta</value>
+    </data>
+    <data name="msg_SamePaths" xml:space="preserve">
+        <value>A pasta de origem e de destino devem ser diferentes!</value>
+    </data>
+    <data name="msg_DontExist" xml:space="preserve">
+        <value>Uma ou mais pastas previamente selecionadas não existem mais (fundo vermelho)</value>
+    </data>
+    <data name="Update" xml:space="preserve">
+        <value>Uma atualização do programa está disponível. 
+Pressione "Sim" se quiser fazer o download agora, caso contrário pressione "Não"</value>
+    </data>
+    <data name="msg_BothEmpty" xml:space="preserve">
+        <value>O controle só fica clicável se ambas as pastas de origem e destino forem definidas!</value>
+    </data>
+    <data name="AlmostOne" xml:space="preserve">
+        <value>Você deve selecionar pelo menos uma linha!</value>
+    </data>
+    <data name="msg_NoWildCards" xml:space="preserve">
+        <value>Curingas não são permitidos em máscaras negativas! Veja o Guia.</value>
+    </data>
+    <data name="msg_Running" xml:space="preserve">
+        <value>O programa já está em execução!</value>
+    </data>
+    <data name="msg_NoBasename" xml:space="preserve">
+        <value>O caminho inicial não contém a pasta base!</value>
+    </data>
+    <data name="msg_NoLog" xml:space="preserve">
+        <value>Nenhum arquivo .log no momento</value>
+    </data>
+    <data name="msg_Erased" xml:space="preserve">
+        <value>Todas as configurações serão apagadas.</value>
+    </data>
+    <data name="txtRowN" xml:space="preserve">
+        <value>Linha n.</value>
+    </data>
+    <data name="txtStartingPath" xml:space="preserve">
+        <value>caminho de partida</value>
+    </data>
+    <data name="txtDoneIn" xml:space="preserve">
+        <value>verificação dos arquivos concluída em</value>
+    </data>
+    <data name="txtSeconds" xml:space="preserve">
+        <value>segundos</value>
+    </data>
+    <data name="txtFound" xml:space="preserve">
+        <value>Encontrados</value>
+    </data>
+    <data name="txtAccessibleFiles" xml:space="preserve">
+        <value>arquivos acessíveis que correspondem às suas configurações em</value>
+    </data>
+    <data name="txtAccessibleDir" xml:space="preserve">
+        <value>diretórios acessíveis com tamanho de</value>
+    </data>
+    <data name="txtSkipping" xml:space="preserve">
+        <value>um momento, por favor, filtrando arquivos não modificados...</value>
+    </data>
+    <data name="txtTotSeconds" xml:space="preserve">
+        <value>segundos no total</value>
+    </data>
+    <data name="txtNewSize" xml:space="preserve">
+        <value>arquivos novos ou modificados com tamanho de</value>
+    </data>
+    <data name="txtTotalFound" xml:space="preserve">
+        <value>Relatório total: encontrados</value>
+    </data>
+    <data name="txtNewTotSize" xml:space="preserve">
+        <value>arquivos novos ou modificados com tamanho total de</value>
+    </data>
+    <data name="txtNewNoSize" xml:space="preserve">
+        <value>arquivos novos ou modificados</value>
+    </data>
+    <data name="txtNoFileToCopy" xml:space="preserve">
+        <value>Não há arquivos para copiar: o botão "Copiar" não está ativado</value>
+    </data>
+    <data name="txtPressOpen" xml:space="preserve">
+        <value>Pressione o botão "Abrir CF2.log" para ler a lista de arquivos</value>
+    </data>
+    <data name="txtStartCopy" xml:space="preserve">
+        <value>Cópia em andamento</value>
+    </data>
+    <data name="txtCopyinErr" xml:space="preserve">
+        <value>erros de cópia</value>
+    </data>
+    <data name="txtNoCopyErr" xml:space="preserve">
+        <value>nenhum erro de cópia</value>
+    </data>
+    <data name="txtCopied" xml:space="preserve">
+        <value>Copiados</value>
+    </data>
+    <data name="txtOver" xml:space="preserve">
+        <value>de</value>
+    </data>
+    <data name="msg_CantCheck" xml:space="preserve">
+        <value>Não é possível marcar a caixa: o caminho de partida não existe mais!</value>
+    </data>
+    <data name="txtPressOpen2" xml:space="preserve">
+        <value>Os erros e os arquivos ignorados estão no final da lista</value>
+    </data>
+    <data name="txtDoneOut" xml:space="preserve">
+        <value>cópia concluída em</value>
+    </data>
+    <data name="logRowN" xml:space="preserve">
+        <value>Linha N</value>
+    </data>
+    <data name="logStarting" xml:space="preserve">
+        <value>Caminho inicial é</value>
+    </data>
+    <data name="logDestination" xml:space="preserve">
+        <value>Caminho de destino é</value>
+    </data>
+    <data name="logCopyHidden" xml:space="preserve">
+        <value>Copiar arquivos ocultos</value>
+    </data>
+    <data name="logCopySystem" xml:space="preserve">
+        <value>Copiar arquivos de sistema</value>
+    </data>
+    <data name="logCopyBetween" xml:space="preserve">
+        <value>Copiar entre</value>
+    </data>
+    <data name="logChecked" xml:space="preserve">
+        <value>marcado</value>
+    </data>
+    <data name="logMaskIs" xml:space="preserve">
+        <value>Máscara é</value>
+    </data>
+    <data name="logBoChecked" xml:space="preserve">
+        <value>BO (apenas nome base) está marcado</value>
+    </data>
+    <data name="logMatchList" xml:space="preserve">
+        <value>Lista de arquivos que correspondem às suas configurações. Pressione o botão "Copiar" para copiá-los para o caminho de destino</value>
+    </data>
+    <data name="logListIsSorted" xml:space="preserve">
+        <value>Nota: a lista de arquivos está ordenada</value>
+    </data>
+    <data name="logFileToCopy" xml:space="preserve">
+        <value>Número de arquivos novos ou modificados a copiar</value>
+    </data>
+    <data name="logStopped" xml:space="preserve">
+        <value>*** Interrompido pelo usuário ***</value>
+    </data>
+    <data name="logFatalError" xml:space="preserve">
+        <value>Erro fatal</value>
+    </data>
+    <data name="logFound" xml:space="preserve">
+        <value>Encontrado</value>
+    </data>
+    <data name="logNoNew" xml:space="preserve">
+        <value>Nenhum arquivo novo ou modificado na linha n</value>
+    </data>
+    <data name="logNotPresent" xml:space="preserve">
+        <value>Não presente</value>
+    </data>
+    <data name="logExisting" xml:space="preserve">
+        <value>Existente</value>
+    </data>
+    <data name="logCopied" xml:space="preserve">
+        <value>Copiado</value>
+    </data>
+    <data name="logNoCopyErr" xml:space="preserve">
+        <value>Sem erros de cópia</value>
+    </data>
+    <data name="logSearch" xml:space="preserve">
+        <value>Data da pesquisa de arquivos</value>
+    </data>
+    <data name="logCopy" xml:space="preserve">
+        <value>Data da cópia dos arquivos</value>
+    </data>
+    <data name="logGotErrors" xml:space="preserve">
+        <value>Lista final de erros detectados</value>
+    </data>
+    <data name="logNoReadErr" xml:space="preserve">
+        <value>Sem erros de leitura</value>
+    </data>
+    <data name="logSkippedList" xml:space="preserve">
+        <value>Lista final de arquivos ou diretórios pulados</value>
+    </data>
+    <data name="logSkipped" xml:space="preserve">
+        <value>Ignorado</value>
+    </data>
+    <data name="logNoSkipped" xml:space="preserve">
+        <value>Nenhum arquivo / diretório ignorado</value>
+    </data>
+</root>

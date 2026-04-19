@@ -1,0 +1,126 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Add Resources Here -->
+    <ControlTemplate x:Key="LedVerde">
+        <Grid Width="10" Height="10">
+            <!-- Sfondo foro neutro (grigio medio per non spegnere il LED) -->
+            <Ellipse Width="10" Height="10" Fill="#555555" />
+            
+            <Ellipse Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Ellipse.Fill>
+                    <RadialGradientBrush Center="50%,50%" GradientOrigin="35%,35%" RadiusX="70%" RadiusY="70%">
+                        <!-- Cuore bianco-verde molto ampio -->
+                        <GradientStop Color="#FFFFFF" Offset="-0.2" /> 
+                        <GradientStop Color="#00FF00" Offset="0.4" /> 
+                        <!-- Bordo verde saturo (NON nero) -->
+                        <GradientStop Color="#008800" Offset="1.0" /> 
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <!-- Punto luce superiore per effetto vetro -->
+            <Ellipse Margin="2,1.5,0,0" Width="3" Height="2" Fill="White" Opacity="0.7" 
+                     VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="LedVerdeSpento">
+        <Grid Width="10" Height="10">
+            <!-- Sfondo foro (leggermente più chiaro per staccare il bordo) -->
+            <Ellipse Width="10" Height="10" Fill="#4A4A4A" />
+        
+            <Ellipse Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Ellipse.Fill>
+                    <RadialGradientBrush Center="50%,50%" GradientOrigin="35%,35%" RadiusX="80%" RadiusY="80%">
+                        <!-- Verde scuro ma saturo al centro -->
+                        <GradientStop Color="#009900" Offset="0.0" /> 
+                        <!-- Transizione verso il corpo scuro -->
+                        <GradientStop Color="#006600" Offset="0.6" /> 
+                        <!-- Bordo d'ombra -->
+                        <GradientStop Color="#003300" Offset="1.0" /> 
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        
+            <!-- Punto luce superficiale (riflesso ambiente) -->
+            <Ellipse Margin="2,1.5,0,0" Width="3" Height="2" Fill="White" Opacity="0.5" 
+                     VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+    </ControlTemplate>
+
+
+    
+    
+    <!-- LED ROSSO "SOLAR" - Molto acceso e nitido 
+    <ControlTemplate x:Key="LedRossoSolar">
+        <Grid Width="10" Height="10">-->
+            <!-- 1. Sfondo incasso (grigio neutro) 
+            <Ellipse Width="10" Height="10" Fill="#444444" />-->
+            
+            <!-- 2. Corpo LED - Il segreto è il Rosso Arancio al centro 
+            <Ellipse Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Ellipse.Fill>
+                    <RadialGradientBrush Center="50%,50%" GradientOrigin="35%,35%" Radius="0.8">-->
+                        <!-- Cuore bianco-giallo per la massima luce 
+                        <GradientStop Color="#FFFFFF" Offset="0.0" /> -->
+                        <!-- Arancio-Rosso (per dare brillantezza al rosso)
+                        <GradientStop Color="#FF6600" Offset="0.2" />  -->
+                        <!-- ROSSO PURO (Occupa la maggior parte del LED) 
+                        <GradientStop Color="#FF0000" Offset="0.5" /> -->
+                        <!-- Bordo finale (Rosso scuro, MAI nero) 
+                        <GradientStop Color="#880000" Offset="1.0" /> 
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>-->
+
+            <!-- 3. Il "Bagliore Interno" (Simulato con un'ellisse bianca sopra) 
+            <Ellipse Width="3.5" Height="2" Margin="2,1.5,0,0" 
+                     Fill="White" Opacity="0.8" 
+                     VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Ellipse.Effect>
+                    <BlurEffect Radius="1.5"/>
+                </Ellipse.Effect>
+            </Ellipse>
+        </Grid>
+    </ControlTemplate>-->
+
+    <!-- LED ROSSO ACCESO (Incassato e potente) 
+    <ControlTemplate x:Key="LedRosso">
+        <Grid Width="10" Height="10">
+            <Ellipse Width="10" Height="10" Fill="#555555" />
+            
+            <Ellipse Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Ellipse.Fill>
+                    <RadialGradientBrush Center="50%,50%" GradientOrigin="35%,35%" Radius="0.7">
+ 
+                        <GradientStop Color="#FFFFFF" Offset="-0.2" />
+                        <GradientStop Color="#FF0000" Offset="0.4" />
+ 
+                        <GradientStop Color="#990000" Offset="1.0" />
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Margin="2,1.5,0,0" Width="3" Height="2" Fill="White" Opacity="0.7" 
+                     VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+    </ControlTemplate>-->
+    
+    
+    <!-- Stampo LED VERDE 
+    <ControlTemplate x:Key="LedVerde">
+        <Grid Width="8" Height="8">
+            <Ellipse Fill="LimeGreen">
+                <Ellipse.Effect>
+                    <DropShadowEffect BlurRadius="15" Color="LimeGreen" Opacity="0.4"/>
+                </Ellipse.Effect>
+            </Ellipse>
+            <Ellipse Margin="1,2,0,0" Width="3" Height="3" Fill="White" Opacity="0.4" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+    </ControlTemplate>-->
+
+    <!-- Stampo LED ROSSO 
+    <ControlTemplate x:Key="LedRosso">
+        <Grid Width="8" Height="8">
+            <Ellipse Fill="Crimson" />
+            <Ellipse Margin="1,2,0,0" Width="3" Height="3" Fill="White" Opacity="0.4" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </Grid>
+    </ControlTemplate>-->
+</ResourceDictionary>

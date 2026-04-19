@@ -1,0 +1,113 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CopyFolders2.App"
+             RequestedThemeVariant="Light">
+             <!-- "Default"o "Dark" rendono le scritte bienche se il tema di Win è scuro -->
+             
+    <Application.Styles>
+        <FluentTheme />
+        
+        <Style  Selector="Label, TextBox, ComboBox, CheckBox, Button">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+        
+        <Style Selector="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+        </Style>
+        
+        <Style Selector="TextBox">
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+       </Style> 
+        
+        <Style Selector="Label">
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>  
+        
+        <Style Selector="Image">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style> 
+        
+         <Style Selector="Button">
+             <Setter Property="Background" Value="Silver"/>
+             <Setter Property="FontSize" Value="13"/>
+             <Setter Property="HorizontalAlignment" Value="Left"/>
+             <Setter Property="VerticalAlignment" Value="Center"/>
+             <Setter Property="HorizontalContentAlignment" Value="Center"/>
+         </Style>    
+        
+        <Style Selector="ComboBox">
+            <Setter Property="MinWidth" Value="0"/>
+            <Setter Property="Width" Value="45"/>
+            <Setter Property="Height" Value="27"/>
+            <Setter Property="MinHeight" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="5,0,0,0"/>
+            <Style.Resources>
+                <x:Double x:Key="ComboBoxThemeMinWidth">0</x:Double>
+            </Style.Resources>
+        </Style>
+        
+        <Style Selector="ComboBox /template/ PathIcon#DropDownGlyph">
+            <Setter Property="Margin" Value="0,0,0,0" />
+            <Setter Property="Width" Value="6" />
+        </Style>
+        
+        <Style Selector="CalendarDatePicker">
+             <Setter Property="MinHeight" Value="14"></Setter>
+             <Setter Property="Padding" Value="4,-4,0,-1"></Setter>           
+        </Style>
+        
+        <!-- Tutto l' ambaradan per disegnare la freccetta in basso -->
+        <Style Selector="CalendarDatePicker /template/ Button#PART_Button">
+            <!-- Rimuoviamo il template originale che contiene il giorno col puntino sopra -->
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid Background="Transparent">
+                        <!-- Disegniamo solo la freccia -->
+                        <TextBlock Text="▼" 
+                                   FontSize="10"
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+            
+        </Style>
+        
+        <Style Selector="ToolTip > TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="TextAlignment" Value="Left" />
+        </Style>
+        
+        <!-- Usa esattamente il titolo che hai messo nel codice C# -->
+        <Style Selector='Window[Title= Select Folder]'>
+            <Setter Property="Width" Value="800"/>
+            <Setter Property="Height" Value="600"/>
+            <!-- MaxWidth e MaxHeight impediscono l'espansione a 1400px -->
+            <Setter Property="MaxWidth" Value="850"/>
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="MaxHeight" Value="650"/>
+            <Setter Property="MinHeight" Value="350"/>
+            <Setter Property="WindowStartupLocation" Value="CenterScreen"/>
+            <Setter Property="WindowState" Value="Normal"/>
+        </Style>
+        
+    </Application.Styles>
+             
+</Application>
