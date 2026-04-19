@@ -12,7 +12,7 @@ CopyFolders2 is a lightweight tool built with **Avalonia UI** and **.NET 8** to 
 - **Portable**: A single executable file, no installation required.
 
 ## 🚀 Installation
-1. Go to the Releases section of this repository [Releases](link-alla-tua-sezione-releases-su-github).
+1. Go to the Releases section of this repository [Releases](https://github.com/eziogarr-coder/CopyFolders2/releases/tag/v2.0.1).
 2. Download the latest `CopyFolders2.exe`.
 3. No installation needed: just double-click to run!
 
@@ -33,7 +33,7 @@ CopyFolders2 è un tool leggero realizzato con **Avalonia UI** e **.NET 8** per 
 - **Portable**: Un unico file eseguibile senza necessità di installazione.
 
 ## 🚀 Installazione
-1. Vai nella sezione [Releases](link-alla-tua-sezione-releases-su-github).
+1. Vai nella sezione [Releases](https://github.com/eziogarr-coder/CopyFolders2/releases/tag/v2.0.1).
 2. Scarica il file `CopyFolders2.exe`.
 3. Avvialo con un doppio clic.
 
