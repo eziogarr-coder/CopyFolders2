@@ -4,7 +4,7 @@
 
 ## English 🇬🇧
 
-CopyFolders2 is a lightweight tool built with **Avalonia UI** and **.NET 8** to simplify folder management and copying on Windows.
+CopyFolders2 is a lightweight tool built with **Avalonia UI** and **.NET 8** to quickly and easily backup your files on Windows 10/11. Read the [Help](https://psmate.com/Help/CF2/intro.html)
 
 ### ✨ Features
 - Modern and intuitive graphical interface.
@@ -32,7 +32,7 @@ dotnet publish CopyFolders2.csproj -c Release -r win-x64 -p:PublishSingleFile=tr
 
 ## Italiano 🇮🇹
 
-CopyFolders2 è un tool leggero realizzato con **Avalonia UI** e **.NET 8** per semplificare la gestione e la copia di cartelle su Windows.
+CopyFolders2 è un tool leggero realizzato con **Avalonia UI** e **.NET 8** per effettuare velocemente e facilmente il backup dei tuoi file su Windows 10/11. Leggi l' [Help](https://psmate.com/Help/CF2/intro.html)
 
 ### ✨ Caratteristiche
 - Interfaccia grafica moderna e intuitiva.
