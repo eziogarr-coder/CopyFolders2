@@ -28,6 +28,8 @@ To generate the same standalone executable, run this command from the project te
 dotnet publish CopyFolders2.csproj -c Release -r win-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:EnableCompressionInSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
+### 🌐 [Author website: psmate.com](https://psmate.com)
+
 ---
 
 ## Italiano 🇮🇹
@@ -56,9 +58,11 @@ Per generare lo stesso eseguibile autonomo, lancia questo comando dal terminale 
 dotnet publish CopyFolders2.csproj -c Release -r win-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:EnableCompressionInSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
+### 🌐 [Sito web dell' autore: psmate.com](https://psmate.com)
+
 ---
 
 ## 🛠️ Tech Stack
-- **IDE**: JetBrains Rider
+- **IDE**: JetBrains Rider 2025.3.2
 - **Framework**: Avalonia UI
 - **Runtime**: .NET 8
