@@ -21,13 +21,6 @@ Some antivirus software might flag the executable as `malicious`.
 **This is a false positive.**
 This happens because the app is published as a "Single File" with compression enabled to keep the size small (~20MB). The full source code is available here for inspection to guarantee transparency and safety. Always test the executable with your antivirus before running it.
 
-### 🛠️ How to build 
- 
-To generate the same standalone executable, run this command from the project terminal:
-```bash
-dotnet publish CopyFolders2.csproj -c Release -r win-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:EnableCompressionInSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true
-```
-
 ### 🌐 [Author website: psmate.com](https://psmate.com)
 
 ---
@@ -50,13 +43,6 @@ CopyFolders2 è un tool leggero realizzato con **Avalonia UI** e **.NET 8** per 
 Alcuni antivirus potrebbero segnalare l'eseguibile come `malicious`.
 **Si tratta di un falso positivo.**
 Ciò accade perché l'app è pubblicata in modalità "Single File" con compressione attiva per ridurne il peso (~20MB). Il codice sorgente è interamente disponibile qui per essere verificato a garanzia di trasparenza e sicurezza. Testa sempre l' eseguibile col tuo antivirus prima di lanciarlo.
-
-### 🛠️ Come compilare
-  
-Per generare lo stesso eseguibile autonomo, lancia questo comando dal terminale del progetto:
-```bash
-dotnet publish CopyFolders2.csproj -c Release -r win-x64 -p:PublishSingleFile=true -p:SelfContained=true -p:EnableCompressionInSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true
-```
 
 ### 🌐 [Sito web dell' autore: psmate.com](https://psmate.com)
 
